@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: health_insights_br
+    # Usando o Unity Catalog que configuramos
+    catalog: workspace 
+    schema: health_insights_br
+    tables:
+      - name: bronze_internacoes_sih
+        description: "Tabela com dados brutos de internações hospitalares do DataSUS."

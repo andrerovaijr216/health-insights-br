@@ -1,0 +1,1716 @@
+[0m13:34:41.161312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807de3b6e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807cce97f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807c1460f0>]}
+
+
+============================== 13:34:41.165231 | ec76a029-fe1a-4439-a9d4-5a6f9658a2de ==============================
+[0m13:34:41.165231 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:34:41.166172 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'profiles_dir': '/home/codespace/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:34:44.314188 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:34:44.314887 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:34:44.315427 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:34:45.416330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c80668c5dc0>]}
+[0m13:34:45.486944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807c6398e0>]}
+[0m13:34:45.487800 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:34:45.708585 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:34:45.709464 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:34:45.710097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c806606c170>]}
+[0m13:34:47.817013 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.health_insights_br.marts
+[0m13:34:47.829532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c806561f800>]}
+[0m13:34:47.921933 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:34:47.924104 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:34:47.934721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8065688f80>]}
+[0m13:34:47.935499 [info ] [MainThread]: Found 1 model, 1 test, 1 source, 685 macros
+[0m13:34:47.936249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c806563b7a0>]}
+[0m13:34:47.939085 [info ] [MainThread]: 
+[0m13:34:47.939777 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:34:47.940506 [info ] [MainThread]: 
+[0m13:34:47.941532 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:34:47.942293 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:34:47.944859 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace) - Creating connection
+[0m13:34:47.945503 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m13:34:47.946003 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m13:34:47.946459 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m13:34:47.946925 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:34:48.389025 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-72b0-1397-8303-5d4612067db8) - Created
+[0m13:34:49.217303 [debug] [ThreadPool]: SQL status: OK in 1.270 seconds
+[0m13:34:49.218852 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07913-72b0-1397-8303-5d4612067db8, command-id=01f07913-72c6-1b03-b90f-2a424baf7f2f) - Closing
+[0m13:34:49.219418 [debug] [ThreadPool]: On list_workspace: Close
+[0m13:34:49.219936 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-72b0-1397-8303-5d4612067db8) - Closing
+[0m13:34:49.383906 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:34:49.384541 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:34:49.398893 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:34:49.399429 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:34:49.399915 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:34:49.630104 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-736e-1a95-ab88-3ed044e5acbb) - Created
+[0m13:34:51.153912 [debug] [ThreadPool]: SQL status: OK in 1.750 seconds
+[0m13:34:51.208816 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07913-736e-1a95-ab88-3ed044e5acbb, command-id=01f07913-737b-18f4-9719-e9ed8ee3ff7d) - Closing
+[0m13:34:51.349164 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:34:51.349816 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-736e-1a95-ab88-3ed044e5acbb) - Closing
+[0m13:34:51.441687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8065688f80>]}
+[0m13:34:51.444858 [debug] [Thread-1 (]: Began running node model.health_insights_br.stg_sih_internacoes
+[0m13:34:51.445549 [info ] [Thread-1 (]: 1 of 1 START sql view model health_insights_br.stg_sih_internacoes ............. [RUN]
+[0m13:34:51.446398 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.stg_sih_internacoes) - Creating connection
+[0m13:34:51.446957 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.stg_sih_internacoes'
+[0m13:34:51.447459 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.stg_sih_internacoes
+[0m13:34:51.458911 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.stg_sih_internacoes"
+[0m13:34:51.459874 [debug] [Thread-1 (]: Began executing node model.health_insights_br.stg_sih_internacoes
+[0m13:34:51.480303 [debug] [Thread-1 (]: MATERIALIZING VIEW
+[0m13:34:51.488295 [warn ] [Thread-1 (]: [[33mWARNING[0m]: Use revamped materializations based on separating create and insert.  This allows more performant column comments, as well as new column features.
+You may opt into the new behavior sooner by setting `flags.use_materialization_v2` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:34:51.489025 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c8065b2e1b0>]}
+[0m13:34:51.506001 [debug] [Thread-1 (]: Creating view `workspace`.`health_insights_br`.`stg_sih_internacoes`
+[0m13:34:51.519038 [debug] [Thread-1 (]: Writing runtime sql for node "model.health_insights_br.stg_sih_internacoes"
+[0m13:34:51.519979 [debug] [Thread-1 (]: Using databricks connection "model.health_insights_br.stg_sih_internacoes"
+[0m13:34:51.520567 [debug] [Thread-1 (]: On model.health_insights_br.stg_sih_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "model.health_insights_br.stg_sih_internacoes"} */
+
+  
+  
+  create or replace view `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+  as (
+    select
+    -- IDs e Chaves
+    N_AIH as id_internacao,
+
+    -- Datas
+    to_date(DT_INTER, 'yyyyMMdd') as data_internacao,
+    ANO_CMPT as ano_competencia,
+    MES_CMPT as mes_competencia,
+
+    -- Demografia do Paciente
+    SEXO as sexo_paciente,
+    IDADE as idade_paciente,
+    UF_ZI as uf_paciente,
+    MUNIC_RES as municipio_residencia_paciente,
+
+    -- Informações Clínicas
+    DIAG_PRINC as cid_diagnostico_principal,
+
+    -- Valores
+    VAL_TOT as valor_total_internacao
+
+from `workspace`.`health_insights_br`.`bronze_internacoes_sih`
+  )
+
+[0m13:34:51.521128 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:34:51.741939 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07913-74af-1117-a012-b677fb953cf4) - Created
+[0m13:34:52.513066 [debug] [Thread-1 (]: SQL status: OK in 0.990 seconds
+[0m13:34:52.514396 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07913-74af-1117-a012-b677fb953cf4, command-id=01f07913-74bd-1cd5-8bb0-4cc0945ba23a) - Closing
+[0m13:34:52.527335 [debug] [Thread-1 (]: Applying tags to relation None
+[0m13:34:52.529421 [debug] [Thread-1 (]: On model.health_insights_br.stg_sih_internacoes: Close
+[0m13:34:52.529989 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07913-74af-1117-a012-b677fb953cf4) - Closing
+[0m13:34:52.615122 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec76a029-fe1a-4439-a9d4-5a6f9658a2de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807e346810>]}
+[0m13:34:52.616571 [info ] [Thread-1 (]: 1 of 1 OK created sql view model health_insights_br.stg_sih_internacoes ........ [[32mOK[0m in 1.17s]
+[0m13:34:52.617781 [debug] [Thread-1 (]: Finished running node model.health_insights_br.stg_sih_internacoes
+[0m13:34:52.619163 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:34:52.619663 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:34:52.620247 [info ] [MainThread]: 
+[0m13:34:52.620826 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 4.68 seconds (4.68s).
+[0m13:34:52.621750 [debug] [MainThread]: Command end result
+[0m13:34:52.662462 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:34:52.664406 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:34:52.670249 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:34:52.670709 [info ] [MainThread]: 
+[0m13:34:52.671351 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:34:52.671884 [info ] [MainThread]: 
+[0m13:34:52.672459 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:34:52.673592 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.576892, "process_in_blocks": "48728", "process_kernel_time": 0.491648, "process_mem_max_rss": "254460", "process_out_blocks": "4504", "process_user_time": 5.919762}
+[0m13:34:52.674238 [debug] [MainThread]: Command `dbt run` succeeded at 13:34:52.674126 after 11.58 seconds
+[0m13:34:52.674762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807c4568a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807cd0eb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7c807e1f0b90>]}
+[0m13:34:52.675268 [debug] [MainThread]: Flushing usage events
+[0m13:34:52.732256 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:37:54.403771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf461b7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf46e4bb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf461b7380>]}
+
+
+============================== 13:37:54.407103 | 9009c035-6442-4ea7-b9d6-39a6c3df8b8f ==============================
+[0m13:37:54.407103 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:37:54.407957 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'debug': 'False', 'profiles_dir': '/home/codespace/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:37:55.528318 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:37:55.529056 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:37:55.529723 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:37:56.343809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf34918c80>]}
+[0m13:37:56.415421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf357ea990>]}
+[0m13:37:56.416426 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:37:56.620356 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:37:56.763568 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m13:37:56.764456 [debug] [MainThread]: Partial parsing: added file: health_insights_br://models/marts/dim_paciente.sql
+[0m13:37:56.765035 [debug] [MainThread]: Partial parsing: added file: health_insights_br://models/marts/fato_internacoes.sql
+[0m13:37:56.950173 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.health_insights_br.fato_internacoes' (models/marts/fato_internacoes.sql) depends on a node named 'dim_paciente' in package '' which was not found
+[0m13:37:57.020205 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.health_insights_br.marts
+[0m13:37:57.039971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fcb6120>]}
+[0m13:37:57.147361 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:37:57.149727 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:37:57.158182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fde9ee0>]}
+[0m13:37:57.158881 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 685 macros
+[0m13:37:57.159475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fba33e0>]}
+[0m13:37:57.161605 [info ] [MainThread]: 
+[0m13:37:57.162243 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:37:57.162787 [info ] [MainThread]: 
+[0m13:37:57.163597 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:37:57.164089 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:37:57.165455 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace) - Creating connection
+[0m13:37:57.166698 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m13:37:57.168180 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m13:37:57.168899 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m13:37:57.170072 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:37:57.414154 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-e35d-1754-86f3-6487dbbfa330) - Created
+[0m13:37:57.638891 [debug] [ThreadPool]: SQL status: OK in 0.470 seconds
+[0m13:37:57.640761 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07913-e35d-1754-86f3-6487dbbfa330, command-id=01f07913-e369-1541-b098-a969ee669652) - Closing
+[0m13:37:57.641521 [debug] [ThreadPool]: On list_workspace: Close
+[0m13:37:57.642040 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-e35d-1754-86f3-6487dbbfa330) - Closing
+[0m13:37:57.728413 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:37:57.729223 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:37:57.745877 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:37:57.746677 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:37:57.747370 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:37:57.998098 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-e3b3-13e0-aaed-c8cf627e9f4a) - Created
+[0m13:37:58.585213 [debug] [ThreadPool]: SQL status: OK in 0.840 seconds
+[0m13:37:58.589823 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07913-e3b3-13e0-aaed-c8cf627e9f4a, command-id=01f07913-e3c1-1516-ab0e-93786f2a7098) - Closing
+[0m13:37:58.590678 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:37:58.591195 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07913-e3b3-13e0-aaed-c8cf627e9f4a) - Closing
+[0m13:37:58.693796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fb49c10>]}
+[0m13:37:58.698748 [debug] [Thread-1 (]: Began running node model.health_insights_br.stg_sih_internacoes
+[0m13:37:58.699511 [info ] [Thread-1 (]: 1 of 1 START sql view model health_insights_br.stg_sih_internacoes ............. [RUN]
+[0m13:37:58.700381 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.stg_sih_internacoes) - Creating connection
+[0m13:37:58.700940 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.stg_sih_internacoes'
+[0m13:37:58.701452 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.stg_sih_internacoes
+[0m13:37:58.710981 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.stg_sih_internacoes"
+[0m13:37:58.711890 [debug] [Thread-1 (]: Began executing node model.health_insights_br.stg_sih_internacoes
+[0m13:37:58.728116 [debug] [Thread-1 (]: MATERIALIZING VIEW
+[0m13:37:58.736365 [warn ] [Thread-1 (]: [[33mWARNING[0m]: Use revamped materializations based on separating create and insert.  This allows more performant column comments, as well as new column features.
+You may opt into the new behavior sooner by setting `flags.use_materialization_v2` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:37:58.737194 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fa37980>]}
+[0m13:37:58.757183 [debug] [Thread-1 (]: Creating view `workspace`.`health_insights_br`.`stg_sih_internacoes`
+[0m13:37:58.770178 [debug] [Thread-1 (]: Writing runtime sql for node "model.health_insights_br.stg_sih_internacoes"
+[0m13:37:58.771297 [debug] [Thread-1 (]: Using databricks connection "model.health_insights_br.stg_sih_internacoes"
+[0m13:37:58.771925 [debug] [Thread-1 (]: On model.health_insights_br.stg_sih_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "model.health_insights_br.stg_sih_internacoes"} */
+
+  
+  
+  create or replace view `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+  as (
+    select
+    -- IDs e Chaves
+    N_AIH as id_internacao,
+
+    -- Datas
+    to_date(DT_INTER, 'yyyyMMdd') as data_internacao,
+    ANO_CMPT as ano_competencia,
+    MES_CMPT as mes_competencia,
+
+    -- Demografia do Paciente
+    SEXO as sexo_paciente,
+    IDADE as idade_paciente,
+    UF_ZI as uf_paciente,
+    MUNIC_RES as municipio_residencia_paciente,
+
+    -- Informações Clínicas
+    DIAG_PRINC as cid_diagnostico_principal,
+
+    -- Valores
+    VAL_TOT as valor_total_internacao
+
+from `workspace`.`health_insights_br`.`bronze_internacoes_sih`
+  )
+
+[0m13:37:58.772480 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:37:58.990757 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07913-e44e-15af-9899-101ed4d168c0) - Created
+[0m13:37:59.593809 [debug] [Thread-1 (]: SQL status: OK in 0.820 seconds
+[0m13:37:59.595243 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07913-e44e-15af-9899-101ed4d168c0, command-id=01f07913-e45a-1c16-9fba-28df5db94e81) - Closing
+[0m13:37:59.608256 [debug] [Thread-1 (]: Applying tags to relation None
+[0m13:37:59.610528 [debug] [Thread-1 (]: On model.health_insights_br.stg_sih_internacoes: Close
+[0m13:37:59.611126 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07913-e44e-15af-9899-101ed4d168c0) - Closing
+[0m13:37:59.697072 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9009c035-6442-4ea7-b9d6-39a6c3df8b8f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf46e487a0>]}
+[0m13:37:59.698494 [info ] [Thread-1 (]: 1 of 1 OK created sql view model health_insights_br.stg_sih_internacoes ........ [[32mOK[0m in 0.99s]
+[0m13:37:59.702282 [debug] [Thread-1 (]: Finished running node model.health_insights_br.stg_sih_internacoes
+[0m13:37:59.706579 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:37:59.707702 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:37:59.710005 [info ] [MainThread]: 
+[0m13:37:59.712042 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.55 seconds (2.55s).
+[0m13:37:59.715379 [debug] [MainThread]: Command end result
+[0m13:37:59.881746 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:37:59.884106 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:37:59.890855 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:37:59.891436 [info ] [MainThread]: 
+[0m13:37:59.892130 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:37:59.892674 [info ] [MainThread]: 
+[0m13:37:59.893265 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:37:59.894524 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.5524564, "process_in_blocks": "0", "process_kernel_time": 0.473004, "process_mem_max_rss": "252636", "process_out_blocks": "4536", "process_user_time": 4.616759}
+[0m13:37:59.895206 [debug] [MainThread]: Command `dbt run` succeeded at 13:37:59.895083 after 5.55 seconds
+[0m13:37:59.895761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf47f49940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fd76de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bf2fd76960>]}
+[0m13:37:59.896304 [debug] [MainThread]: Flushing usage events
+[0m13:38:00.017289 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:39:53.639607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be11e513800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be1205b7260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be11e590bc0>]}
+
+
+============================== 13:39:53.644204 | 96259e44-014f-45f4-ad97-cd1ccb59ad19 ==============================
+[0m13:39:53.644204 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:39:53.645244 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:39:54.659213 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:39:54.659893 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:39:54.660467 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:39:55.418216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be10fb5f0b0>]}
+[0m13:39:55.489375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be10fb09910>]}
+[0m13:39:55.490295 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:39:55.813234 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:39:55.942665 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:39:55.943469 [debug] [MainThread]: Partial parsing: added file: health_insights_br://models/marts/schema.yml
+[0m13:39:56.025441 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'dim_paciente' in the 'models' section of file 'models/marts/schema.yml'
+[0m13:39:56.027329 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'fato_internacoes' in the 'models' section of file 'models/marts/schema.yml'
+[0m13:39:56.164782 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m13:39:56.165587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be10c4b8fe0>]}
+[0m13:39:56.199358 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1' (models/marts/schema.yml) depends on a node named 'dim_paciente' in package '' which was not found
+[0m13:39:56.200220 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b' (models/marts/schema.yml) depends on a node named 'dim_paciente' in package '' which was not found
+[0m13:39:56.200926 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb' (models/marts/schema.yml) depends on a node named 'fato_internacoes' in package '' which was not found
+[0m13:39:56.201589 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8' (models/marts/schema.yml) depends on a node named 'dim_paciente' in package '' which was not found
+[0m13:39:56.202431 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8' (models/marts/schema.yml) depends on a node named 'fato_internacoes' in package '' which was not found
+[0m13:39:56.303968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be107b9f140>]}
+[0m13:39:56.424205 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:39:56.426350 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:39:56.605929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be107901490>]}
+[0m13:39:56.606620 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 685 macros
+[0m13:39:56.607223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be107b9f4a0>]}
+[0m13:39:56.609177 [info ] [MainThread]: 
+[0m13:39:56.609773 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:39:56.610428 [info ] [MainThread]: 
+[0m13:39:56.611499 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:39:56.612197 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:39:56.613749 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:39:56.614433 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:39:56.636036 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:39:56.637105 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:39:56.637923 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:39:57.110295 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-2ab7-12e2-9859-1d75a78841cf) - Created
+[0m13:39:57.737824 [debug] [ThreadPool]: SQL status: OK in 1.100 seconds
+[0m13:39:57.744081 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07914-2ab7-12e2-9859-1d75a78841cf, command-id=01f07914-2ac8-1786-b282-393a19a33372) - Closing
+[0m13:39:57.745332 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:39:57.746241 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-2ab7-12e2-9859-1d75a78841cf) - Closing
+[0m13:39:57.860453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96259e44-014f-45f4-ad97-cd1ccb59ad19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be107ab7d10>]}
+[0m13:39:57.863002 [debug] [Thread-1 (]: Began running node test.health_insights_br.dim_paciente
+[0m13:39:57.863552 [info ] [Thread-1 (]: 1 of 2 START test dim_paciente ................................................. [RUN]
+[0m13:39:57.864365 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.dim_paciente) - Creating connection
+[0m13:39:57.864925 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.dim_paciente'
+[0m13:39:57.865489 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.dim_paciente
+[0m13:39:57.874825 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.dim_paciente"
+[0m13:39:57.875699 [debug] [Thread-1 (]: Began executing node test.health_insights_br.dim_paciente
+[0m13:39:57.898948 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.dim_paciente"
+[0m13:39:57.899885 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.dim_paciente"
+[0m13:39:57.900471 [debug] [Thread-1 (]: On test.health_insights_br.dim_paciente: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.dim_paciente"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- models/marts/dim_paciente.sql
+select
+    -- Usando o ID da internação como chave única para o paciente nesta análise
+    id_internacao as sk_paciente,
+
+    sexo_paciente,
+    idade_paciente,
+    uf_paciente,
+    municipio_residencia_paciente
+
+from `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+  
+      
+    ) dbt_internal_test
+[0m13:39:57.901039 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:39:58.102040 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-2b4e-128e-be3e-1943cd0ef600) - Created
+[0m13:39:59.690463 [debug] [Thread-1 (]: SQL status: OK in 1.790 seconds
+[0m13:39:59.693359 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-2b4e-128e-be3e-1943cd0ef600, command-id=01f07914-2b59-11f9-a4d0-3835484de574) - Closing
+[0m13:39:59.827851 [debug] [Thread-1 (]: On test.health_insights_br.dim_paciente: Close
+[0m13:39:59.828578 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-2b4e-128e-be3e-1943cd0ef600) - Closing
+[0m13:39:59.920693 [error] [Thread-1 (]: 1 of 2 FAIL 10 dim_paciente .................................................... [[31mFAIL 10[0m in 2.06s]
+[0m13:39:59.922039 [debug] [Thread-1 (]: Finished running node test.health_insights_br.dim_paciente
+[0m13:39:59.922857 [debug] [Thread-1 (]: Began running node test.health_insights_br.stg_sih_internacoes
+[0m13:39:59.923850 [info ] [Thread-1 (]: 2 of 2 START test stg_sih_internacoes .......................................... [RUN]
+[0m13:39:59.925046 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.stg_sih_internacoes) - Creating connection
+[0m13:39:59.925827 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.stg_sih_internacoes'
+[0m13:39:59.928431 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.stg_sih_internacoes
+[0m13:39:59.935155 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.stg_sih_internacoes"
+[0m13:39:59.936336 [debug] [Thread-1 (]: Began executing node test.health_insights_br.stg_sih_internacoes
+[0m13:39:59.941872 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.stg_sih_internacoes"
+[0m13:39:59.943072 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.stg_sih_internacoes"
+[0m13:39:59.943967 [debug] [Thread-1 (]: On test.health_insights_br.stg_sih_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.stg_sih_internacoes"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    -- IDs e Chaves
+    N_AIH as id_internacao,
+
+    -- Datas
+    to_date(DT_INTER, 'yyyyMMdd') as data_internacao,
+    ANO_CMPT as ano_competencia,
+    MES_CMPT as mes_competencia,
+
+    -- Demografia do Paciente
+    SEXO as sexo_paciente,
+    IDADE as idade_paciente,
+    UF_ZI as uf_paciente,
+    MUNIC_RES as municipio_residencia_paciente,
+
+    -- Informações Clínicas
+    DIAG_PRINC as cid_diagnostico_principal,
+
+    -- Valores
+    VAL_TOT as valor_total_internacao
+
+from `workspace`.`health_insights_br`.`bronze_internacoes_sih`
+  
+  
+      
+    ) dbt_internal_test
+[0m13:39:59.944771 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:40:00.249733 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-2c92-1b52-bdda-481b3146e3b5) - Created
+[0m13:40:00.795475 [debug] [Thread-1 (]: SQL status: OK in 0.850 seconds
+[0m13:40:00.798016 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-2c92-1b52-bdda-481b3146e3b5, command-id=01f07914-2c9f-1c3a-a882-1bd54f84348f) - Closing
+[0m13:40:00.798974 [debug] [Thread-1 (]: On test.health_insights_br.stg_sih_internacoes: Close
+[0m13:40:00.799561 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-2c92-1b52-bdda-481b3146e3b5) - Closing
+[0m13:40:00.894807 [error] [Thread-1 (]: 2 of 2 FAIL 10 stg_sih_internacoes ............................................. [[31mFAIL 10[0m in 0.97s]
+[0m13:40:00.895906 [debug] [Thread-1 (]: Finished running node test.health_insights_br.stg_sih_internacoes
+[0m13:40:00.897545 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:40:00.898091 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:40:00.898759 [info ] [MainThread]: 
+[0m13:40:00.899371 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 4.29 seconds (4.29s).
+[0m13:40:00.900755 [debug] [MainThread]: Command end result
+[0m13:40:00.941172 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:40:00.943418 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:40:00.950290 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:40:00.950796 [info ] [MainThread]: 
+[0m13:40:00.951423 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:40:00.951984 [info ] [MainThread]: 
+[0m13:40:00.952600 [error] [MainThread]: [31mFailure in test dim_paciente (models/marts/dim_paciente.sql)[0m
+[0m13:40:00.953208 [error] [MainThread]:   Got 10 results, configured to fail if != 0
+[0m13:40:00.953710 [info ] [MainThread]: 
+[0m13:40:00.954312 [info ] [MainThread]:   compiled code at target/compiled/health_insights_br/models/marts/dim_paciente.sql
+[0m13:40:00.954883 [info ] [MainThread]: 
+[0m13:40:00.955495 [error] [MainThread]: [31mFailure in test stg_sih_internacoes (models/staging/stg_sih_internacoes.sql)[0m
+[0m13:40:00.956181 [error] [MainThread]:   Got 10 results, configured to fail if != 0
+[0m13:40:00.956746 [info ] [MainThread]: 
+[0m13:40:00.957414 [info ] [MainThread]:   compiled code at target/compiled/health_insights_br/models/staging/stg_sih_internacoes.sql
+[0m13:40:00.958154 [info ] [MainThread]: 
+[0m13:40:00.958935 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=2
+[0m13:40:00.959965 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:40:00.961592 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 7.382272, "process_in_blocks": "1120", "process_kernel_time": 0.456764, "process_mem_max_rss": "257484", "process_out_blocks": "4624", "process_user_time": 4.605455}
+[0m13:40:00.962365 [debug] [MainThread]: Command `dbt test` failed at 13:40:00.962248 after 7.38 seconds
+[0m13:40:00.962975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be11e1673b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be10c1b6450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7be10c1b7920>]}
+[0m13:40:00.963766 [debug] [MainThread]: Flushing usage events
+[0m13:40:01.071316 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:41:44.724305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774df278e510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774df0a0dee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774df0b331a0>]}
+
+
+============================== 13:41:44.727706 | 5e51b149-97fe-4e5e-8f47-ffc0b3614ff5 ==============================
+[0m13:41:44.727706 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:41:44.728518 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test -s marts', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:41:45.692491 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:41:45.693225 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:41:45.693860 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:41:46.450712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5e51b149-97fe-4e5e-8f47-ffc0b3614ff5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774ddb749d60>]}
+[0m13:41:46.521270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5e51b149-97fe-4e5e-8f47-ffc0b3614ff5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774dee2738f0>]}
+[0m13:41:46.522260 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:41:46.723104 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:41:46.869406 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:41:46.870092 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:41:46.926665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5e51b149-97fe-4e5e-8f47-ffc0b3614ff5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774df0929a30>]}
+[0m13:41:47.044643 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:41:47.047103 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:41:47.066173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5e51b149-97fe-4e5e-8f47-ffc0b3614ff5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774dd9d15f40>]}
+[0m13:41:47.066870 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 685 macros
+[0m13:41:47.067500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e51b149-97fe-4e5e-8f47-ffc0b3614ff5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774dd9fdd220>]}
+[0m13:41:47.069264 [info ] [MainThread]: 
+[0m13:41:47.069917 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:41:47.070479 [info ] [MainThread]: 
+[0m13:41:47.071340 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:41:47.071820 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:41:47.073181 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:41:47.073895 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:41:47.089372 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:41:47.090100 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:41:47.090580 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:41:47.445993 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-6c7a-1c9b-85cc-378a884f3239) - Created
+[0m13:41:47.824841 [debug] [ThreadPool]: SQL status: OK in 0.730 seconds
+[0m13:41:47.831113 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07914-6c7a-1c9b-85cc-378a884f3239, command-id=01f07914-6c85-190c-a757-99fa19c9b00f) - Closing
+[0m13:41:47.832416 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:41:47.833236 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-6c7a-1c9b-85cc-378a884f3239) - Closing
+[0m13:41:47.919152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5e51b149-97fe-4e5e-8f47-ffc0b3614ff5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774dd9d2d940>]}
+[0m13:41:47.923844 [debug] [Thread-1 (]: Began running node test.health_insights_br.dim_paciente
+[0m13:41:47.924406 [info ] [Thread-1 (]: 1 of 1 START test dim_paciente ................................................. [RUN]
+[0m13:41:47.925207 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.dim_paciente) - Creating connection
+[0m13:41:47.925738 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.dim_paciente'
+[0m13:41:47.926240 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.dim_paciente
+[0m13:41:47.935047 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.dim_paciente"
+[0m13:41:47.935871 [debug] [Thread-1 (]: Began executing node test.health_insights_br.dim_paciente
+[0m13:41:47.955854 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.dim_paciente"
+[0m13:41:47.956588 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.dim_paciente"
+[0m13:41:47.957175 [debug] [Thread-1 (]: On test.health_insights_br.dim_paciente: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.dim_paciente"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- models/marts/dim_paciente.sql
+select
+    -- Usando o ID da internação como chave única para o paciente nesta análise
+    id_internacao as sk_paciente,
+
+    sexo_paciente,
+    idade_paciente,
+    uf_paciente,
+    municipio_residencia_paciente
+
+from `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+  
+      
+    ) dbt_internal_test
+[0m13:41:47.957817 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:41:48.154374 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-6ce6-106a-9669-524932cea03f) - Created
+[0m13:41:48.439963 [debug] [Thread-1 (]: SQL status: OK in 0.480 seconds
+[0m13:41:48.442805 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-6ce6-106a-9669-524932cea03f, command-id=01f07914-6cf1-182c-bee1-6a7497c3fdbf) - Closing
+[0m13:41:48.446269 [debug] [Thread-1 (]: On test.health_insights_br.dim_paciente: Close
+[0m13:41:48.446850 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-6ce6-106a-9669-524932cea03f) - Closing
+[0m13:41:48.539716 [error] [Thread-1 (]: 1 of 1 FAIL 10 dim_paciente .................................................... [[31mFAIL 10[0m in 0.61s]
+[0m13:41:48.541369 [debug] [Thread-1 (]: Finished running node test.health_insights_br.dim_paciente
+[0m13:41:48.543832 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:41:48.544678 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:41:48.545564 [info ] [MainThread]: 
+[0m13:41:48.546368 [info ] [MainThread]: Finished running 1 test in 0 hours 0 minutes and 1.47 seconds (1.47s).
+[0m13:41:48.547786 [debug] [MainThread]: Command end result
+[0m13:41:48.607373 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:41:48.610960 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:41:48.619063 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:41:48.619552 [info ] [MainThread]: 
+[0m13:41:48.620225 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:41:48.620821 [info ] [MainThread]: 
+[0m13:41:48.621450 [error] [MainThread]: [31mFailure in test dim_paciente (models/marts/dim_paciente.sql)[0m
+[0m13:41:48.622073 [error] [MainThread]:   Got 10 results, configured to fail if != 0
+[0m13:41:48.622584 [info ] [MainThread]: 
+[0m13:41:48.623193 [info ] [MainThread]:   compiled code at target/compiled/health_insights_br/models/marts/dim_paciente.sql
+[0m13:41:48.623718 [info ] [MainThread]: 
+[0m13:41:48.624296 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:41:48.625513 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 3.9622917, "process_in_blocks": "0", "process_kernel_time": 0.485513, "process_mem_max_rss": "254184", "process_out_blocks": "3080", "process_user_time": 4.089057}
+[0m13:41:48.626315 [debug] [MainThread]: Command `dbt test` failed at 13:41:48.626200 after 3.96 seconds
+[0m13:41:48.626884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774df278e510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774dda1d2f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x774df06b3710>]}
+[0m13:41:48.628021 [debug] [MainThread]: Flushing usage events
+[0m13:41:48.699221 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:43:44.523325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7654860bf350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7654885a6c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x765486f51e80>]}
+
+
+============================== 13:43:44.526691 | 7dba59ac-c154-47cb-807e-4642999c0831 ==============================
+[0m13:43:44.526691 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:43:44.527480 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True'}
+[0m13:43:44.661241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7dba59ac-c154-47cb-807e-4642999c0831', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x765485d49eb0>]}
+[0m13:43:44.674351 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_success": true, "command_wall_clock_time": 0.21263264, "process_in_blocks": "8", "process_kernel_time": 0.22398, "process_mem_max_rss": "101956", "process_out_blocks": "8", "process_user_time": 1.760987}
+[0m13:43:44.675302 [debug] [MainThread]: Command `dbt clean` succeeded at 13:43:44.675141 after 0.21 seconds
+[0m13:43:44.676207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7654866c6810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x765485d9d280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x765485f2b560>]}
+[0m13:43:44.676848 [debug] [MainThread]: Flushing usage events
+[0m13:43:44.814291 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:44:04.971851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5c07ccb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5af89820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5c07ecf0>]}
+
+
+============================== 13:44:04.977558 | 9ce99a8f-0e21-4eb1-9576-5d85120a1e67 ==============================
+[0m13:44:04.977558 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:44:04.978990 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'debug': 'False', 'profiles_dir': '/home/codespace/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:05.970155 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:44:05.970850 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:44:05.971397 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:44:06.686987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5d25fc50>]}
+[0m13:44:06.774457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa4a14eab0>]}
+[0m13:44:06.775408 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:44:06.959203 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:44:06.960090 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:44:06.960717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa4b9fbc50>]}
+[0m13:44:09.063498 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m13:44:09.064423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa484213d0>]}
+[0m13:44:09.220130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa48ab7950>]}
+[0m13:44:09.338291 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:44:09.340410 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:44:09.349277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa48b36060>]}
+[0m13:44:09.350194 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 685 macros
+[0m13:44:09.350969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa48b21910>]}
+[0m13:44:09.353857 [info ] [MainThread]: 
+[0m13:44:09.354668 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:44:09.355411 [info ] [MainThread]: 
+[0m13:44:09.356474 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:44:09.357227 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:44:09.369403 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace) - Creating connection
+[0m13:44:09.370183 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace'
+[0m13:44:09.370974 [debug] [ThreadPool]: Using databricks connection "list_workspace"
+[0m13:44:09.371680 [debug] [ThreadPool]: On list_workspace: GetSchemas(database=workspace, schema=None)
+[0m13:44:09.372329 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:09.729203 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-c144-1d6d-953d-d08877ae6938) - Created
+[0m13:44:10.011860 [debug] [ThreadPool]: SQL status: OK in 0.640 seconds
+[0m13:44:10.013446 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07914-c144-1d6d-953d-d08877ae6938, command-id=01f07914-c159-16f2-a836-27d0836684ea) - Closing
+[0m13:44:10.014036 [debug] [ThreadPool]: On list_workspace: Close
+[0m13:44:10.014523 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-c144-1d6d-953d-d08877ae6938) - Closing
+[0m13:44:10.107698 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:44:10.108373 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:44:10.123249 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:44:10.123892 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:44:10.124395 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:10.332752 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-c1a6-10fa-93f0-cd5389dbfc86) - Created
+[0m13:44:10.768833 [debug] [ThreadPool]: SQL status: OK in 0.640 seconds
+[0m13:44:10.773047 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07914-c1a6-10fa-93f0-cd5389dbfc86, command-id=01f07914-c1b5-1852-a560-2dd29ae867dc) - Closing
+[0m13:44:10.773825 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:44:10.774328 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-c1a6-10fa-93f0-cd5389dbfc86) - Closing
+[0m13:44:10.868937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5d0554f0>]}
+[0m13:44:10.871510 [debug] [Thread-1 (]: Began running node model.health_insights_br.stg_sih_internacoes
+[0m13:44:10.872273 [info ] [Thread-1 (]: 1 of 3 START sql view model health_insights_br.stg_sih_internacoes ............. [RUN]
+[0m13:44:10.873140 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.stg_sih_internacoes) - Creating connection
+[0m13:44:10.873696 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.stg_sih_internacoes'
+[0m13:44:10.874218 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.stg_sih_internacoes
+[0m13:44:10.883684 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.stg_sih_internacoes"
+[0m13:44:10.884620 [debug] [Thread-1 (]: Began executing node model.health_insights_br.stg_sih_internacoes
+[0m13:44:10.905187 [debug] [Thread-1 (]: MATERIALIZING VIEW
+[0m13:44:10.908912 [warn ] [Thread-1 (]: [[33mWARNING[0m]: Use revamped materializations based on separating create and insert.  This allows more performant column comments, as well as new column features.
+You may opt into the new behavior sooner by setting `flags.use_materialization_v2` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m13:44:10.909830 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa48f20980>]}
+[0m13:44:10.941571 [debug] [Thread-1 (]: Creating view `workspace`.`health_insights_br`.`stg_sih_internacoes`
+[0m13:44:10.961741 [debug] [Thread-1 (]: Writing runtime sql for node "model.health_insights_br.stg_sih_internacoes"
+[0m13:44:10.962982 [debug] [Thread-1 (]: Using databricks connection "model.health_insights_br.stg_sih_internacoes"
+[0m13:44:10.964040 [debug] [Thread-1 (]: On model.health_insights_br.stg_sih_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "model.health_insights_br.stg_sih_internacoes"} */
+
+  
+  
+  create or replace view `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+  as (
+    select
+    -- IDs e Chaves
+    N_AIH as id_internacao,
+
+    -- Datas
+    to_date(DT_INTER, 'yyyyMMdd') as data_internacao,
+    ANO_CMPT as ano_competencia,
+    MES_CMPT as mes_competencia,
+
+    -- Demografia do Paciente
+    SEXO as sexo_paciente,
+    IDADE as idade_paciente,
+    UF_ZI as uf_paciente,
+    MUNIC_RES as municipio_residencia_paciente,
+
+    -- Informações Clínicas
+    DIAG_PRINC as cid_diagnostico_principal,
+
+    -- Valores
+    VAL_TOT as valor_total_internacao
+
+from `workspace`.`health_insights_br`.`bronze_internacoes_sih`
+  )
+
+[0m13:44:10.964952 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:11.184090 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-c228-1916-95a7-f6993da340f2) - Created
+[0m13:44:11.681319 [debug] [Thread-1 (]: SQL status: OK in 0.720 seconds
+[0m13:44:11.682608 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-c228-1916-95a7-f6993da340f2, command-id=01f07914-c232-1fb8-b87d-d3951e77ac03) - Closing
+[0m13:44:11.696163 [debug] [Thread-1 (]: Applying tags to relation None
+[0m13:44:11.698485 [debug] [Thread-1 (]: On model.health_insights_br.stg_sih_internacoes: Close
+[0m13:44:11.699085 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-c228-1916-95a7-f6993da340f2) - Closing
+[0m13:44:11.777333 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5bc6caa0>]}
+[0m13:44:11.778255 [info ] [Thread-1 (]: 1 of 3 OK created sql view model health_insights_br.stg_sih_internacoes ........ [[32mOK[0m in 0.90s]
+[0m13:44:11.779130 [debug] [Thread-1 (]: Finished running node model.health_insights_br.stg_sih_internacoes
+[0m13:44:11.780139 [debug] [Thread-1 (]: Began running node model.health_insights_br.dim_paciente
+[0m13:44:11.780811 [info ] [Thread-1 (]: 2 of 3 START sql table model health_insights_br.dim_paciente ................... [RUN]
+[0m13:44:11.781662 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.dim_paciente) - Creating connection
+[0m13:44:11.782271 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.dim_paciente'
+[0m13:44:11.782858 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.dim_paciente
+[0m13:44:11.788017 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.dim_paciente"
+[0m13:44:11.789347 [debug] [Thread-1 (]: Began executing node model.health_insights_br.dim_paciente
+[0m13:44:11.808192 [debug] [Thread-1 (]: MATERIALIZING TABLE
+[0m13:44:11.852475 [debug] [Thread-1 (]: Writing runtime sql for node "model.health_insights_br.dim_paciente"
+[0m13:44:11.853533 [debug] [Thread-1 (]: Using databricks connection "model.health_insights_br.dim_paciente"
+[0m13:44:11.854187 [debug] [Thread-1 (]: On model.health_insights_br.dim_paciente: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "model.health_insights_br.dim_paciente"} */
+
+  
+    
+        create or replace table `workspace`.`health_insights_br`.`dim_paciente`
+      
+      
+  using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      -- models/marts/dim_paciente.sql
+select
+    -- Usando o ID da internação como chave única para o paciente nesta análise
+    id_internacao as sk_paciente,
+
+    sexo_paciente,
+    idade_paciente,
+    uf_paciente,
+    municipio_residencia_paciente
+
+from `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+[0m13:44:11.854745 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:12.058299 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-c2ad-1ff6-a58e-1a344c5d4986) - Created
+[0m13:44:16.174400 [debug] [Thread-1 (]: SQL status: OK in 4.320 seconds
+[0m13:44:16.175731 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-c2ad-1ff6-a58e-1a344c5d4986, command-id=01f07914-c2b8-165c-b652-162d20a57b7a) - Closing
+[0m13:44:16.282568 [debug] [Thread-1 (]: Applying tags to relation None
+[0m13:44:16.300708 [debug] [Thread-1 (]: On model.health_insights_br.dim_paciente: Close
+[0m13:44:16.301289 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-c2ad-1ff6-a58e-1a344c5d4986) - Closing
+[0m13:44:16.401768 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa48b89ee0>]}
+[0m13:44:16.404920 [info ] [Thread-1 (]: 2 of 3 OK created sql table model health_insights_br.dim_paciente .............. [[32mOK[0m in 4.62s]
+[0m13:44:16.406170 [debug] [Thread-1 (]: Finished running node model.health_insights_br.dim_paciente
+[0m13:44:16.409506 [debug] [Thread-1 (]: Began running node model.health_insights_br.fato_internacoes
+[0m13:44:16.410528 [info ] [Thread-1 (]: 3 of 3 START sql table model health_insights_br.fato_internacoes ............... [RUN]
+[0m13:44:16.412127 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.fato_internacoes) - Creating connection
+[0m13:44:16.414562 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.fato_internacoes'
+[0m13:44:16.415386 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.fato_internacoes
+[0m13:44:16.424086 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.fato_internacoes"
+[0m13:44:16.424860 [debug] [Thread-1 (]: Began executing node model.health_insights_br.fato_internacoes
+[0m13:44:16.427569 [debug] [Thread-1 (]: MATERIALIZING TABLE
+[0m13:44:16.431367 [debug] [Thread-1 (]: Writing runtime sql for node "model.health_insights_br.fato_internacoes"
+[0m13:44:16.432063 [debug] [Thread-1 (]: Using databricks connection "model.health_insights_br.fato_internacoes"
+[0m13:44:16.432649 [debug] [Thread-1 (]: On model.health_insights_br.fato_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "model.health_insights_br.fato_internacoes"} */
+
+  
+    
+        create or replace table `workspace`.`health_insights_br`.`fato_internacoes`
+      
+      
+  using delta
+      
+      
+      
+      
+      
+      
+      
+      as
+      -- models/marts/fato_internacoes.sql
+select
+    p.sk_paciente,
+    s.data_internacao,
+    s.ano_competencia,
+    s.mes_competencia,
+    s.cid_diagnostico_principal,
+    s.valor_total_internacao
+
+from `workspace`.`health_insights_br`.`stg_sih_internacoes` as s
+left join `workspace`.`health_insights_br`.`dim_paciente` as p
+    on s.id_internacao = p.sk_paciente
+  
+[0m13:44:16.433192 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:16.644732 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-c569-1a94-b139-78f6b0486d34) - Created
+[0m13:44:20.137646 [debug] [Thread-1 (]: SQL status: OK in 3.700 seconds
+[0m13:44:20.140230 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-c569-1a94-b139-78f6b0486d34, command-id=01f07914-c573-1980-88d8-8736a2326e80) - Closing
+[0m13:44:20.259121 [debug] [Thread-1 (]: Applying tags to relation None
+[0m13:44:20.261397 [debug] [Thread-1 (]: On model.health_insights_br.fato_internacoes: Close
+[0m13:44:20.261954 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-c569-1a94-b139-78f6b0486d34) - Closing
+[0m13:44:20.352603 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9ce99a8f-0e21-4eb1-9576-5d85120a1e67', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa4905d580>]}
+[0m13:44:20.353467 [info ] [Thread-1 (]: 3 of 3 OK created sql table model health_insights_br.fato_internacoes .......... [[32mOK[0m in 3.94s]
+[0m13:44:20.354303 [debug] [Thread-1 (]: Finished running node model.health_insights_br.fato_internacoes
+[0m13:44:20.355606 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:44:20.356123 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:44:20.356769 [info ] [MainThread]: 
+[0m13:44:20.357316 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 11.00 seconds (11.00s).
+[0m13:44:20.358476 [debug] [MainThread]: Command end result
+[0m13:44:20.401400 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:44:20.403293 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:44:20.409166 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:44:20.409611 [info ] [MainThread]: 
+[0m13:44:20.410236 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:44:20.410769 [info ] [MainThread]: 
+[0m13:44:20.411341 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:44:20.412067 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:44:20.413325 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 15.523619, "process_in_blocks": "0", "process_kernel_time": 0.433799, "process_mem_max_rss": "258416", "process_out_blocks": "4680", "process_user_time": 6.451147}
+[0m13:44:20.414007 [debug] [MainThread]: Command `dbt run` succeeded at 13:44:20.413896 after 15.52 seconds
+[0m13:44:20.414514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa48add130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5ba46cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cfa5be02cf0>]}
+[0m13:44:20.415059 [debug] [MainThread]: Flushing usage events
+[0m13:44:20.454963 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:44:41.780360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f25fc38f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f25f624b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f25fa9640>]}
+
+
+============================== 13:44:41.785796 | 11b87388-99df-4d30-9fde-54b64b7fb60d ==============================
+[0m13:44:41.785796 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:44:41.786917 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'profiles_dir': '/home/codespace/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt test', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:42.720670 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:44:42.721540 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:44:42.722241 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:44:43.508319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '11b87388-99df-4d30-9fde-54b64b7fb60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f1433bb00>]}
+[0m13:44:43.591504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '11b87388-99df-4d30-9fde-54b64b7fb60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f159f3440>]}
+[0m13:44:43.592400 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:44:43.794544 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:44:43.945524 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:44:43.946077 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:44:44.006494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '11b87388-99df-4d30-9fde-54b64b7fb60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f0f755610>]}
+[0m13:44:44.119818 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:44:44.121770 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:44:44.138720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '11b87388-99df-4d30-9fde-54b64b7fb60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f0f231d90>]}
+[0m13:44:44.139289 [info ] [MainThread]: Found 3 models, 7 data tests, 1 source, 685 macros
+[0m13:44:44.139881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '11b87388-99df-4d30-9fde-54b64b7fb60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f149a2d50>]}
+[0m13:44:44.142008 [info ] [MainThread]: 
+[0m13:44:44.142574 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:44:44.143114 [info ] [MainThread]: 
+[0m13:44:44.143899 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:44:44.144354 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:44:44.153309 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:44:44.153895 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:44:44.168152 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:44:44.168729 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:44:44.169223 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:44.357844 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-d5ef-126b-bbe5-4963ed0cd28f) - Created
+[0m13:44:44.702753 [debug] [ThreadPool]: SQL status: OK in 0.530 seconds
+[0m13:44:44.706967 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07914-d5ef-126b-bbe5-4963ed0cd28f, command-id=01f07914-d5f8-1622-9a6e-2eb476950952) - Closing
+[0m13:44:44.707841 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:44:44.708332 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07914-d5ef-126b-bbe5-4963ed0cd28f) - Closing
+[0m13:44:44.800993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '11b87388-99df-4d30-9fde-54b64b7fb60d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f23443cb0>]}
+[0m13:44:44.803582 [debug] [Thread-1 (]: Began running node test.health_insights_br.dim_paciente
+[0m13:44:44.804196 [info ] [Thread-1 (]: 1 of 7 START test dim_paciente ................................................. [RUN]
+[0m13:44:44.805011 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.dim_paciente) - Creating connection
+[0m13:44:44.805521 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.dim_paciente'
+[0m13:44:44.806058 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.dim_paciente
+[0m13:44:44.815322 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.dim_paciente"
+[0m13:44:44.816125 [debug] [Thread-1 (]: Began executing node test.health_insights_br.dim_paciente
+[0m13:44:44.838055 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.dim_paciente"
+[0m13:44:44.839094 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.dim_paciente"
+[0m13:44:44.840026 [debug] [Thread-1 (]: On test.health_insights_br.dim_paciente: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.dim_paciente"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- models/marts/dim_paciente.sql
+select
+    -- Usando o ID da internação como chave única para o paciente nesta análise
+    id_internacao as sk_paciente,
+
+    sexo_paciente,
+    idade_paciente,
+    uf_paciente,
+    municipio_residencia_paciente
+
+from `workspace`.`health_insights_br`.`stg_sih_internacoes`
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:44.840869 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:45.044986 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d656-1e43-a426-814d41700944) - Created
+[0m13:44:45.284161 [debug] [Thread-1 (]: SQL status: OK in 0.440 seconds
+[0m13:44:45.287049 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d656-1e43-a426-814d41700944, command-id=01f07914-d662-1ecb-8960-fe0af485d11e) - Closing
+[0m13:44:45.290816 [debug] [Thread-1 (]: On test.health_insights_br.dim_paciente: Close
+[0m13:44:45.291395 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d656-1e43-a426-814d41700944) - Closing
+[0m13:44:45.373573 [error] [Thread-1 (]: 1 of 7 FAIL 10 dim_paciente .................................................... [[31mFAIL 10[0m in 0.57s]
+[0m13:44:45.374664 [debug] [Thread-1 (]: Finished running node test.health_insights_br.dim_paciente
+[0m13:44:45.375238 [debug] [Thread-1 (]: Began running node test.health_insights_br.fato_internacoes
+[0m13:44:45.375805 [info ] [Thread-1 (]: 2 of 7 START test fato_internacoes ............................................. [RUN]
+[0m13:44:45.376664 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.fato_internacoes) - Creating connection
+[0m13:44:45.377181 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.fato_internacoes'
+[0m13:44:45.377696 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.fato_internacoes
+[0m13:44:45.382182 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.fato_internacoes"
+[0m13:44:45.383197 [debug] [Thread-1 (]: Began executing node test.health_insights_br.fato_internacoes
+[0m13:44:45.386484 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.fato_internacoes"
+[0m13:44:45.387162 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.fato_internacoes"
+[0m13:44:45.387746 [debug] [Thread-1 (]: On test.health_insights_br.fato_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.fato_internacoes"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- models/marts/fato_internacoes.sql
+select
+    p.sk_paciente,
+    s.data_internacao,
+    s.ano_competencia,
+    s.mes_competencia,
+    s.cid_diagnostico_principal,
+    s.valor_total_internacao
+
+from `workspace`.`health_insights_br`.`stg_sih_internacoes` as s
+left join `workspace`.`health_insights_br`.`dim_paciente` as p
+    on s.id_internacao = p.sk_paciente
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:45.388268 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:45.580915 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d6a9-16c4-9520-17cf46c6aaaf) - Created
+[0m13:44:46.508008 [debug] [Thread-1 (]: SQL status: OK in 1.120 seconds
+[0m13:44:46.510340 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d6a9-16c4-9520-17cf46c6aaaf, command-id=01f07914-d6b2-1d9d-bf91-1d58686bbfe5) - Closing
+[0m13:44:46.511203 [debug] [Thread-1 (]: On test.health_insights_br.fato_internacoes: Close
+[0m13:44:46.511749 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d6a9-16c4-9520-17cf46c6aaaf) - Closing
+[0m13:44:46.601777 [error] [Thread-1 (]: 2 of 7 FAIL 10 fato_internacoes ................................................ [[31mFAIL 10[0m in 1.23s]
+[0m13:44:46.602851 [debug] [Thread-1 (]: Finished running node test.health_insights_br.fato_internacoes
+[0m13:44:46.603485 [debug] [Thread-1 (]: Began running node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:44:46.604123 [info ] [Thread-1 (]: 3 of 7 START test not_null_dim_paciente_sk_paciente ............................ [RUN]
+[0m13:44:46.604911 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b) - Creating connection
+[0m13:44:46.605441 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b'
+[0m13:44:46.605988 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:44:46.620170 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m13:44:46.620988 [debug] [Thread-1 (]: Began executing node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:44:46.624139 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m13:44:46.624862 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m13:44:46.625433 [debug] [Thread-1 (]: On test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sk_paciente
+from `workspace`.`health_insights_br`.`dim_paciente`
+where sk_paciente is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:46.625987 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:46.809598 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d765-1544-85e6-65eb06177d74) - Created
+[0m13:44:47.426130 [debug] [Thread-1 (]: SQL status: OK in 0.800 seconds
+[0m13:44:47.428927 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d765-1544-85e6-65eb06177d74, command-id=01f07914-d76e-1af0-a9c8-fffcf3c1e435) - Closing
+[0m13:44:47.429838 [debug] [Thread-1 (]: On test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b: Close
+[0m13:44:47.430665 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d765-1544-85e6-65eb06177d74) - Closing
+[0m13:44:47.514796 [info ] [Thread-1 (]: 3 of 7 PASS not_null_dim_paciente_sk_paciente .................................. [[32mPASS[0m in 0.91s]
+[0m13:44:47.515930 [debug] [Thread-1 (]: Finished running node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:44:47.516559 [debug] [Thread-1 (]: Began running node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:44:47.517260 [info ] [Thread-1 (]: 4 of 7 START test not_null_fato_internacoes_sk_paciente ........................ [RUN]
+[0m13:44:47.518161 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb) - Creating connection
+[0m13:44:47.518709 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb'
+[0m13:44:47.519322 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:44:47.526421 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m13:44:47.527285 [debug] [Thread-1 (]: Began executing node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:44:47.530871 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m13:44:47.531538 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m13:44:47.532143 [debug] [Thread-1 (]: On test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sk_paciente
+from `workspace`.`health_insights_br`.`fato_internacoes`
+where sk_paciente is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:47.532680 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:47.718166 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d7ef-1a7c-a4f1-a32860531dda) - Created
+[0m13:44:48.325691 [debug] [Thread-1 (]: SQL status: OK in 0.790 seconds
+[0m13:44:48.328126 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d7ef-1a7c-a4f1-a32860531dda, command-id=01f07914-d7f8-1f77-b049-57a5564f529c) - Closing
+[0m13:44:48.329007 [debug] [Thread-1 (]: On test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb: Close
+[0m13:44:48.329550 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d7ef-1a7c-a4f1-a32860531dda) - Closing
+[0m13:44:48.410857 [info ] [Thread-1 (]: 4 of 7 PASS not_null_fato_internacoes_sk_paciente .............................. [[32mPASS[0m in 0.89s]
+[0m13:44:48.411832 [debug] [Thread-1 (]: Finished running node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:44:48.412403 [debug] [Thread-1 (]: Began running node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:44:48.413015 [info ] [Thread-1 (]: 5 of 7 START test relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_  [RUN]
+[0m13:44:48.413804 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8) - Creating connection
+[0m13:44:48.414334 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8'
+[0m13:44:48.414862 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:44:48.425524 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m13:44:48.426291 [debug] [Thread-1 (]: Began executing node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:44:48.429562 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m13:44:48.430221 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m13:44:48.431056 [debug] [Thread-1 (]: On test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select sk_paciente as from_field
+    from `workspace`.`health_insights_br`.`fato_internacoes`
+    where sk_paciente is not null
+),
+
+parent as (
+    select sk_paciente as to_field
+    from `workspace`.`health_insights_br`.`dim_paciente`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:48.431622 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:48.635347 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d87b-1b80-9367-a7c17d402252) - Created
+[0m13:44:49.657704 [debug] [Thread-1 (]: SQL status: OK in 1.230 seconds
+[0m13:44:49.660021 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d87b-1b80-9367-a7c17d402252, command-id=01f07914-d884-19fc-a4b4-e482cb6e5650) - Closing
+[0m13:44:49.660859 [debug] [Thread-1 (]: On test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8: Close
+[0m13:44:49.661400 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d87b-1b80-9367-a7c17d402252) - Closing
+[0m13:44:49.748999 [info ] [Thread-1 (]: 5 of 7 PASS relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_  [[32mPASS[0m in 1.34s]
+[0m13:44:49.749970 [debug] [Thread-1 (]: Finished running node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:44:49.750541 [debug] [Thread-1 (]: Began running node test.health_insights_br.stg_sih_internacoes
+[0m13:44:49.751153 [info ] [Thread-1 (]: 6 of 7 START test stg_sih_internacoes .......................................... [RUN]
+[0m13:44:49.751902 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.stg_sih_internacoes) - Creating connection
+[0m13:44:49.752413 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.stg_sih_internacoes'
+[0m13:44:49.752932 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.stg_sih_internacoes
+[0m13:44:49.757020 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.stg_sih_internacoes"
+[0m13:44:49.758065 [debug] [Thread-1 (]: Began executing node test.health_insights_br.stg_sih_internacoes
+[0m13:44:49.761201 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.stg_sih_internacoes"
+[0m13:44:49.761881 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.stg_sih_internacoes"
+[0m13:44:49.762447 [debug] [Thread-1 (]: On test.health_insights_br.stg_sih_internacoes: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.stg_sih_internacoes"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    -- IDs e Chaves
+    N_AIH as id_internacao,
+
+    -- Datas
+    to_date(DT_INTER, 'yyyyMMdd') as data_internacao,
+    ANO_CMPT as ano_competencia,
+    MES_CMPT as mes_competencia,
+
+    -- Demografia do Paciente
+    SEXO as sexo_paciente,
+    IDADE as idade_paciente,
+    UF_ZI as uf_paciente,
+    MUNIC_RES as municipio_residencia_paciente,
+
+    -- Informações Clínicas
+    DIAG_PRINC as cid_diagnostico_principal,
+
+    -- Valores
+    VAL_TOT as valor_total_internacao
+
+from `workspace`.`health_insights_br`.`bronze_internacoes_sih`
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:49.763012 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:49.977223 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d948-166b-a54e-afa86cfb2a65) - Created
+[0m13:44:50.155695 [debug] [Thread-1 (]: SQL status: OK in 0.390 seconds
+[0m13:44:50.158035 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d948-166b-a54e-afa86cfb2a65, command-id=01f07914-d951-127d-85d4-01759cd684af) - Closing
+[0m13:44:50.158913 [debug] [Thread-1 (]: On test.health_insights_br.stg_sih_internacoes: Close
+[0m13:44:50.159454 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d948-166b-a54e-afa86cfb2a65) - Closing
+[0m13:44:50.243802 [error] [Thread-1 (]: 6 of 7 FAIL 10 stg_sih_internacoes ............................................. [[31mFAIL 10[0m in 0.49s]
+[0m13:44:50.244802 [debug] [Thread-1 (]: Finished running node test.health_insights_br.stg_sih_internacoes
+[0m13:44:50.245396 [debug] [Thread-1 (]: Began running node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:44:50.246008 [info ] [Thread-1 (]: 7 of 7 START test unique_dim_paciente_sk_paciente .............................. [RUN]
+[0m13:44:50.246825 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1) - Creating connection
+[0m13:44:50.247353 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1'
+[0m13:44:50.247875 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:44:50.258464 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m13:44:50.259192 [debug] [Thread-1 (]: Began executing node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:44:50.262392 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m13:44:50.263039 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m13:44:50.263597 [debug] [Thread-1 (]: On test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    sk_paciente as unique_field,
+    count(*) as n_records
+
+from `workspace`.`health_insights_br`.`dim_paciente`
+where sk_paciente is not null
+group by sk_paciente
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:44:50.264143 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:50.505939 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d996-13d3-ab74-bfb6796ae550) - Created
+[0m13:44:51.325583 [debug] [Thread-1 (]: SQL status: OK in 1.060 seconds
+[0m13:44:51.327944 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07914-d996-13d3-ab74-bfb6796ae550, command-id=01f07914-d9a2-13e0-a031-706f7738a9b2) - Closing
+[0m13:44:51.328824 [debug] [Thread-1 (]: On test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1: Close
+[0m13:44:51.329367 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07914-d996-13d3-ab74-bfb6796ae550) - Closing
+[0m13:44:51.421321 [info ] [Thread-1 (]: 7 of 7 PASS unique_dim_paciente_sk_paciente .................................... [[32mPASS[0m in 1.17s]
+[0m13:44:51.422296 [debug] [Thread-1 (]: Finished running node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:44:51.423711 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:44:51.424208 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:44:51.424821 [info ] [MainThread]: 
+[0m13:44:51.425369 [info ] [MainThread]: Finished running 7 data tests in 0 hours 0 minutes and 7.28 seconds (7.28s).
+[0m13:44:51.427254 [debug] [MainThread]: Command end result
+[0m13:44:51.462272 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:44:51.464077 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:44:51.471093 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:44:51.471558 [info ] [MainThread]: 
+[0m13:44:51.472198 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:44:51.472742 [info ] [MainThread]: 
+[0m13:44:51.473357 [error] [MainThread]: [31mFailure in test dim_paciente (models/marts/dim_paciente.sql)[0m
+[0m13:44:51.473971 [error] [MainThread]:   Got 10 results, configured to fail if != 0
+[0m13:44:51.474455 [info ] [MainThread]: 
+[0m13:44:51.475085 [info ] [MainThread]:   compiled code at target/compiled/health_insights_br/models/marts/dim_paciente.sql
+[0m13:44:51.475584 [info ] [MainThread]: 
+[0m13:44:51.476207 [error] [MainThread]: [31mFailure in test fato_internacoes (models/marts/fato_internacoes.sql)[0m
+[0m13:44:51.476798 [error] [MainThread]:   Got 10 results, configured to fail if != 0
+[0m13:44:51.477351 [info ] [MainThread]: 
+[0m13:44:51.478041 [info ] [MainThread]:   compiled code at target/compiled/health_insights_br/models/marts/fato_internacoes.sql
+[0m13:44:51.478561 [info ] [MainThread]: 
+[0m13:44:51.479347 [error] [MainThread]: [31mFailure in test stg_sih_internacoes (models/staging/stg_sih_internacoes.sql)[0m
+[0m13:44:51.480231 [error] [MainThread]:   Got 10 results, configured to fail if != 0
+[0m13:44:51.480934 [info ] [MainThread]: 
+[0m13:44:51.481805 [info ] [MainThread]:   compiled code at target/compiled/health_insights_br/models/staging/stg_sih_internacoes.sql
+[0m13:44:51.482514 [info ] [MainThread]: 
+[0m13:44:51.483224 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=7
+[0m13:44:51.484508 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 9.767287, "process_in_blocks": "0", "process_kernel_time": 0.469962, "process_mem_max_rss": "256340", "process_out_blocks": "3264", "process_user_time": 4.42979}
+[0m13:44:51.485414 [debug] [MainThread]: Command `dbt test` failed at 13:44:51.485256 after 9.77 seconds
+[0m13:44:51.486230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f257a2f00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f257a14c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x788f26401730>]}
+[0m13:44:51.487050 [debug] [MainThread]: Flushing usage events
+[0m13:44:51.608897 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:47:25.381916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aed241d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aef136510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aed078830>]}
+
+
+============================== 13:47:25.385223 | da808c84-5999-4fbb-b773-3bd9632f4215 ==============================
+[0m13:47:25.385223 [info ] [MainThread]: Running with dbt=1.10.8
+[0m13:47:25.386030 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt test', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:47:26.325357 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:47:26.326013 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:47:26.326565 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:47:27.076532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aea8b84d0>]}
+[0m13:47:27.159514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1add3565a0>]}
+[0m13:47:27.160399 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m13:47:27.362049 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m13:47:27.482543 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m13:47:27.483375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aed160260>]}
+[0m13:47:29.386090 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m13:47:29.386853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1ad61450a0>]}
+[0m13:47:29.547849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1ad620fc80>]}
+[0m13:47:29.642460 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:47:29.644405 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:47:29.660672 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1ad621d6a0>]}
+[0m13:47:29.661252 [info ] [MainThread]: Found 3 models, 4 data tests, 1 source, 685 macros
+[0m13:47:29.661851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1ad61e9970>]}
+[0m13:47:29.663853 [info ] [MainThread]: 
+[0m13:47:29.664420 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m13:47:29.664966 [info ] [MainThread]: 
+[0m13:47:29.665736 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:47:29.666193 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:47:29.674719 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m13:47:29.675391 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m13:47:29.688514 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m13:47:29.689190 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m13:47:29.689697 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:47:30.119965 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07915-38bb-169b-a4ff-dcf07a241413) - Created
+[0m13:47:30.841725 [debug] [ThreadPool]: SQL status: OK in 1.150 seconds
+[0m13:47:30.846272 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f07915-38bb-169b-a4ff-dcf07a241413, command-id=01f07915-38ca-1b6d-b72e-c50904f47402) - Closing
+[0m13:47:30.847230 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m13:47:30.847770 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f07915-38bb-169b-a4ff-dcf07a241413) - Closing
+[0m13:47:30.935348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'da808c84-5999-4fbb-b773-3bd9632f4215', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1ad606bd40>]}
+[0m13:47:30.937907 [debug] [Thread-1 (]: Began running node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:47:30.938460 [info ] [Thread-1 (]: 1 of 4 START test not_null_dim_paciente_sk_paciente ............................ [RUN]
+[0m13:47:30.939268 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b) - Creating connection
+[0m13:47:30.939800 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b'
+[0m13:47:30.940300 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:47:30.958595 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m13:47:30.959408 [debug] [Thread-1 (]: Began executing node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:47:30.978748 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m13:47:30.979456 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m13:47:30.980043 [debug] [Thread-1 (]: On test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sk_paciente
+from `workspace`.`health_insights_br`.`dim_paciente`
+where sk_paciente is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:47:30.980563 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:47:31.243348 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-3965-1bac-a8c5-8f260669ec06) - Created
+[0m13:47:31.455511 [debug] [Thread-1 (]: SQL status: OK in 0.470 seconds
+[0m13:47:31.458437 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07915-3965-1bac-a8c5-8f260669ec06, command-id=01f07915-3971-1404-8d03-4b71e4b98987) - Closing
+[0m13:47:31.462396 [debug] [Thread-1 (]: On test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b: Close
+[0m13:47:31.462984 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-3965-1bac-a8c5-8f260669ec06) - Closing
+[0m13:47:31.539368 [info ] [Thread-1 (]: 1 of 4 PASS not_null_dim_paciente_sk_paciente .................................. [[32mPASS[0m in 0.60s]
+[0m13:47:31.540376 [debug] [Thread-1 (]: Finished running node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m13:47:31.540976 [debug] [Thread-1 (]: Began running node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:47:31.541605 [info ] [Thread-1 (]: 2 of 4 START test not_null_fato_internacoes_sk_paciente ........................ [RUN]
+[0m13:47:31.542428 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb) - Creating connection
+[0m13:47:31.542962 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb'
+[0m13:47:31.543458 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:47:31.551688 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m13:47:31.552487 [debug] [Thread-1 (]: Began executing node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:47:31.555698 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m13:47:31.556370 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m13:47:31.556956 [debug] [Thread-1 (]: On test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sk_paciente
+from `workspace`.`health_insights_br`.`fato_internacoes`
+where sk_paciente is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:47:31.557470 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:47:31.753147 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-39b5-174a-8748-62f67f570e76) - Created
+[0m13:47:31.941603 [debug] [Thread-1 (]: SQL status: OK in 0.380 seconds
+[0m13:47:31.943944 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07915-39b5-174a-8748-62f67f570e76, command-id=01f07915-39c0-174e-ad99-f9056dc1506f) - Closing
+[0m13:47:31.944794 [debug] [Thread-1 (]: On test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb: Close
+[0m13:47:31.945325 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-39b5-174a-8748-62f67f570e76) - Closing
+[0m13:47:32.033272 [info ] [Thread-1 (]: 2 of 4 PASS not_null_fato_internacoes_sk_paciente .............................. [[32mPASS[0m in 0.49s]
+[0m13:47:32.034244 [debug] [Thread-1 (]: Finished running node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m13:47:32.034819 [debug] [Thread-1 (]: Began running node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:47:32.035456 [info ] [Thread-1 (]: 3 of 4 START test relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_  [RUN]
+[0m13:47:32.036240 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8) - Creating connection
+[0m13:47:32.036788 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8'
+[0m13:47:32.037299 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:47:32.046763 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m13:47:32.047531 [debug] [Thread-1 (]: Began executing node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:47:32.050743 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m13:47:32.051419 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m13:47:32.052014 [debug] [Thread-1 (]: On test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select sk_paciente as from_field
+    from `workspace`.`health_insights_br`.`fato_internacoes`
+    where sk_paciente is not null
+),
+
+parent as (
+    select sk_paciente as to_field
+    from `workspace`.`health_insights_br`.`dim_paciente`
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:47:32.052542 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:47:32.308160 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-3a09-1da0-877c-e19e12f6de0d) - Created
+[0m13:47:32.603855 [debug] [Thread-1 (]: SQL status: OK in 0.550 seconds
+[0m13:47:32.606132 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07915-3a09-1da0-877c-e19e12f6de0d, command-id=01f07915-3a14-13a5-9d2e-de3231a06e0c) - Closing
+[0m13:47:32.606977 [debug] [Thread-1 (]: On test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8: Close
+[0m13:47:32.607520 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-3a09-1da0-877c-e19e12f6de0d) - Closing
+[0m13:47:32.695199 [info ] [Thread-1 (]: 3 of 4 PASS relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_  [[32mPASS[0m in 0.66s]
+[0m13:47:32.696147 [debug] [Thread-1 (]: Finished running node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m13:47:32.696730 [debug] [Thread-1 (]: Began running node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:47:32.697313 [info ] [Thread-1 (]: 4 of 4 START test unique_dim_paciente_sk_paciente .............................. [RUN]
+[0m13:47:32.698086 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1) - Creating connection
+[0m13:47:32.698598 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1'
+[0m13:47:32.699132 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:47:32.709950 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m13:47:32.710729 [debug] [Thread-1 (]: Began executing node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:47:32.713877 [debug] [Thread-1 (]: Writing runtime sql for node "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m13:47:32.714549 [debug] [Thread-1 (]: Using databricks connection "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m13:47:32.715133 [debug] [Thread-1 (]: On test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "node_id": "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    sk_paciente as unique_field,
+    count(*) as n_records
+
+from `workspace`.`health_insights_br`.`dim_paciente`
+where sk_paciente is not null
+group by sk_paciente
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:47:32.715669 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:47:32.918158 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-3a66-1b0a-a9ac-d65e406f3cb4) - Created
+[0m13:47:33.101236 [debug] [Thread-1 (]: SQL status: OK in 0.390 seconds
+[0m13:47:33.104892 [debug] [Thread-1 (]: Databricks adapter: Cursor(session-id=01f07915-3a66-1b0a-a9ac-d65e406f3cb4, command-id=01f07915-3a70-1a4b-92e2-d0d0b1084f01) - Closing
+[0m13:47:33.106232 [debug] [Thread-1 (]: On test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1: Close
+[0m13:47:33.107152 [debug] [Thread-1 (]: Databricks adapter: Connection(session-id=01f07915-3a66-1b0a-a9ac-d65e406f3cb4) - Closing
+[0m13:47:33.197518 [info ] [Thread-1 (]: 4 of 4 PASS unique_dim_paciente_sk_paciente .................................... [[32mPASS[0m in 0.50s]
+[0m13:47:33.199348 [debug] [Thread-1 (]: Finished running node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m13:47:33.202681 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m13:47:33.203398 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m13:47:33.204136 [info ] [MainThread]: 
+[0m13:47:33.204767 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 3.54 seconds (3.54s).
+[0m13:47:33.206728 [debug] [MainThread]: Command end result
+[0m13:47:33.243053 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m13:47:33.244903 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m13:47:33.251768 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m13:47:33.252235 [info ] [MainThread]: 
+[0m13:47:33.252876 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:47:33.253394 [info ] [MainThread]: 
+[0m13:47:33.253996 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m13:47:33.254735 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m13:47:33.255893 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 7.9384594, "process_in_blocks": "0", "process_kernel_time": 0.479838, "process_mem_max_rss": "259740", "process_out_blocks": "4664", "process_user_time": 5.993489}
+[0m13:47:33.256496 [debug] [MainThread]: Command `dbt test` succeeded at 13:47:33.256384 after 7.94 seconds
+[0m13:47:33.257038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aed3851c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aed387cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1aec99aff0>]}
+[0m13:47:33.257696 [debug] [MainThread]: Flushing usage events
+[0m13:47:33.298223 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:39:21.198534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8c3f33e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8c6bcb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8c3f1880>]}
+
+
+============================== 14:39:21.203192 | 654be8c1-8d9f-4b64-a714-b2b085940125 ==============================
+[0m14:39:21.203192 [info ] [MainThread]: Running with dbt=1.10.8
+[0m14:39:21.204125 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'profiles_dir': '/home/codespace/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt docs generate', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:39:23.573541 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m14:39:23.574301 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m14:39:23.574862 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m14:39:31.446311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '654be8c1-8d9f-4b64-a714-b2b085940125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d75beeed0>]}
+[0m14:39:31.517127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '654be8c1-8d9f-4b64-a714-b2b085940125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d89606f90>]}
+[0m14:39:31.518028 [info ] [MainThread]: Registered adapter: databricks=1.10.9
+[0m14:39:31.743313 [debug] [MainThread]: checksum: 265d66e81f90af29a7a28579c9b54d938c94f4a57c57be5f853267ae509b5fcb, vars: {}, profile: , target: , version: 1.10.8
+[0m14:39:31.952385 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:39:31.952974 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:39:32.003388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '654be8c1-8d9f-4b64-a714-b2b085940125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d75a17830>]}
+[0m14:39:32.016275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '654be8c1-8d9f-4b64-a714-b2b085940125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d75705f40>]}
+[0m14:39:32.016925 [info ] [MainThread]: Found 3 models, 4 data tests, 1 source, 685 macros
+[0m14:39:32.017529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '654be8c1-8d9f-4b64-a714-b2b085940125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d7581c950>]}
+[0m14:39:32.019535 [info ] [MainThread]: 
+[0m14:39:32.020121 [info ] [MainThread]: Concurrency: 1 threads (target='databricks')
+[0m14:39:32.020639 [info ] [MainThread]: 
+[0m14:39:32.021422 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m14:39:32.021888 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m14:39:32.030371 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_workspace_health_insights_br) - Creating connection
+[0m14:39:32.030952 [debug] [ThreadPool]: Acquiring new databricks connection 'list_workspace_health_insights_br'
+[0m14:39:32.047745 [debug] [ThreadPool]: Using databricks connection "list_workspace_health_insights_br"
+[0m14:39:32.048372 [debug] [ThreadPool]: On list_workspace_health_insights_br: /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "list_workspace_health_insights_br"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'workspace' 
+  AND table_schema = 'health_insights_br'
+
+  
+[0m14:39:32.048872 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:39:32.766816 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f0791c-7dd5-1078-92da-4dfbf61167b4) - Created
+[0m14:39:54.579494 [debug] [ThreadPool]: SQL status: OK in 22.530 seconds
+[0m14:39:54.615321 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f0791c-7dd5-1078-92da-4dfbf61167b4, command-id=01f0791c-7df9-159a-903b-41a8ef87b6c5) - Closing
+[0m14:39:54.789658 [debug] [ThreadPool]: On list_workspace_health_insights_br: Close
+[0m14:39:54.790564 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f0791c-7dd5-1078-92da-4dfbf61167b4) - Closing
+[0m14:39:54.875202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '654be8c1-8d9f-4b64-a714-b2b085940125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8978bb00>]}
+[0m14:39:54.879071 [debug] [Thread-1 (]: Began running node model.health_insights_br.stg_sih_internacoes
+[0m14:39:54.880212 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.stg_sih_internacoes) - Creating connection
+[0m14:39:54.880956 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.stg_sih_internacoes'
+[0m14:39:54.881477 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.stg_sih_internacoes
+[0m14:39:54.890857 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.stg_sih_internacoes"
+[0m14:39:54.891707 [debug] [Thread-1 (]: Began executing node model.health_insights_br.stg_sih_internacoes
+[0m14:39:54.892658 [debug] [Thread-1 (]: Finished running node model.health_insights_br.stg_sih_internacoes
+[0m14:39:54.893477 [debug] [Thread-1 (]: Began running node model.health_insights_br.dim_paciente
+[0m14:39:54.894293 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.dim_paciente) - Creating connection
+[0m14:39:54.894831 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.dim_paciente'
+[0m14:39:54.895337 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.dim_paciente
+[0m14:39:54.898454 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.dim_paciente"
+[0m14:39:54.899223 [debug] [Thread-1 (]: Began executing node model.health_insights_br.dim_paciente
+[0m14:39:54.900076 [debug] [Thread-1 (]: Finished running node model.health_insights_br.dim_paciente
+[0m14:39:54.900889 [debug] [Thread-1 (]: Began running node model.health_insights_br.fato_internacoes
+[0m14:39:54.901573 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.health_insights_br.fato_internacoes) - Creating connection
+[0m14:39:54.902124 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.health_insights_br.fato_internacoes'
+[0m14:39:54.902628 [debug] [Thread-1 (]: Began compiling node model.health_insights_br.fato_internacoes
+[0m14:39:54.905846 [debug] [Thread-1 (]: Writing injected SQL for node "model.health_insights_br.fato_internacoes"
+[0m14:39:54.906593 [debug] [Thread-1 (]: Began executing node model.health_insights_br.fato_internacoes
+[0m14:39:54.907442 [debug] [Thread-1 (]: Finished running node model.health_insights_br.fato_internacoes
+[0m14:39:54.908007 [debug] [Thread-1 (]: Began running node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m14:39:54.908732 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b) - Creating connection
+[0m14:39:54.909359 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b'
+[0m14:39:54.909922 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m14:39:54.924094 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b"
+[0m14:39:54.924886 [debug] [Thread-1 (]: Began executing node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m14:39:54.925736 [debug] [Thread-1 (]: Finished running node test.health_insights_br.not_null_dim_paciente_sk_paciente.2940aec84b
+[0m14:39:54.926321 [debug] [Thread-1 (]: Began running node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m14:39:54.926987 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1) - Creating connection
+[0m14:39:54.927558 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1'
+[0m14:39:54.928102 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m14:39:54.935122 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1"
+[0m14:39:54.935894 [debug] [Thread-1 (]: Began executing node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m14:39:54.936722 [debug] [Thread-1 (]: Finished running node test.health_insights_br.unique_dim_paciente_sk_paciente.a5e72f5fb1
+[0m14:39:54.937297 [debug] [Thread-1 (]: Began running node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m14:39:54.938021 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb) - Creating connection
+[0m14:39:54.938543 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb'
+[0m14:39:54.939069 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m14:39:54.943606 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb"
+[0m14:39:54.944435 [debug] [Thread-1 (]: Began executing node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m14:39:54.945249 [debug] [Thread-1 (]: Finished running node test.health_insights_br.not_null_fato_internacoes_sk_paciente.868f9fd1fb
+[0m14:39:54.945818 [debug] [Thread-1 (]: Began running node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m14:39:54.946505 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8) - Creating connection
+[0m14:39:54.947061 [debug] [Thread-1 (]: Acquiring new databricks connection 'test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8'
+[0m14:39:54.947568 [debug] [Thread-1 (]: Began compiling node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m14:39:54.956623 [debug] [Thread-1 (]: Writing injected SQL for node "test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8"
+[0m14:39:54.957399 [debug] [Thread-1 (]: Began executing node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m14:39:54.958271 [debug] [Thread-1 (]: Finished running node test.health_insights_br.relationships_fato_internacoes_sk_paciente__sk_paciente__ref_dim_paciente_.3ec5dccba8
+[0m14:39:54.960482 [debug] [MainThread]: Command end result
+[0m14:39:55.058822 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m14:39:55.061737 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m14:39:55.068945 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/health-insights-br/dbt_project/target/run_results.json
+[0m14:39:55.232480 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=generate_catalog) - Creating connection
+[0m14:39:55.233105 [debug] [MainThread]: Acquiring new databricks connection 'generate_catalog'
+[0m14:39:55.233524 [info ] [MainThread]: Building catalog
+[0m14:39:55.235535 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=('workspace', 'health_insights_br')) - Creating connection
+[0m14:39:55.236132 [debug] [ThreadPool]: Acquiring new databricks connection '('workspace', 'health_insights_br')'
+[0m14:39:55.244667 [debug] [ThreadPool]: Using databricks connection "('workspace', 'health_insights_br')"
+[0m14:39:55.245215 [debug] [ThreadPool]: On ('workspace', 'health_insights_br'): /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "('workspace', 'health_insights_br')"} */
+
+    
+SELECT current_catalog()
+
+  
+[0m14:39:55.245679 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:39:55.520354 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f0791c-8b7e-1eac-a984-a7cf107cb1f8) - Created
+[0m14:39:56.190911 [debug] [ThreadPool]: SQL status: OK in 0.950 seconds
+[0m14:39:56.192965 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f0791c-8b7e-1eac-a984-a7cf107cb1f8, command-id=01f0791c-8b89-109a-8f08-67db3c6a4ccc) - Closing
+[0m14:39:56.199620 [debug] [ThreadPool]: Using databricks connection "('workspace', 'health_insights_br')"
+[0m14:39:56.200155 [debug] [ThreadPool]: On ('workspace', 'health_insights_br'): /* {"app": "dbt", "dbt_version": "1.10.8", "dbt_databricks_version": "1.10.9", "databricks_sql_connector_version": "4.0.5", "profile_name": "health_insights_br", "target_name": "databricks", "connection_name": "('workspace', 'health_insights_br')"} */
+
+    
+SHOW TABLE EXTENDED IN `workspace`.`health_insights_br` LIKE 'fato_internacoes|stg_sih_internacoes|dim_paciente|bronze_internacoes_sih'
+
+  
+[0m14:39:58.866452 [debug] [ThreadPool]: SQL status: OK in 2.670 seconds
+[0m14:39:58.869064 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f0791c-8b7e-1eac-a984-a7cf107cb1f8, command-id=01f0791c-8bf1-1797-ac4e-3be0d678a011) - Closing
+[0m14:39:58.875407 [debug] [ThreadPool]: On ('workspace', 'health_insights_br'): Close
+[0m14:39:58.875925 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f0791c-8b7e-1eac-a984-a7cf107cb1f8) - Closing
+[0m14:39:58.978851 [debug] [MainThread]: Wrote artifact CatalogArtifact to /workspaces/health-insights-br/dbt_project/target/catalog.json
+[0m14:39:59.012101 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/health-insights-br/dbt_project/target/manifest.json
+[0m14:39:59.014068 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/health-insights-br/dbt_project/target/semantic_manifest.json
+[0m14:39:59.014561 [info ] [MainThread]: Catalog written to /workspaces/health-insights-br/dbt_project/target/catalog.json
+[0m14:39:59.015818 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 37.878643, "process_in_blocks": "210120", "process_kernel_time": 0.55115, "process_mem_max_rss": "252512", "process_out_blocks": "6528", "process_user_time": 4.009095}
+[0m14:39:59.016480 [debug] [MainThread]: Command `dbt docs generate` succeeded at 14:39:59.016367 after 37.88 seconds
+[0m14:39:59.017006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8df5ae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8c792600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x706d8c793cb0>]}
+[0m14:39:59.017514 [debug] [MainThread]: Flushing usage events
+[0m14:39:59.062739 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:40:28.500673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d518c05cc80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d518a51cf20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d518a9d7470>]}
+
+
+============================== 14:40:28.504029 | ff36a084-0764-4204-99ab-f2ccb9522185 ==============================
+[0m14:40:28.504029 [info ] [MainThread]: Running with dbt=1.10.8
+[0m14:40:28.504871 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/workspaces/health-insights-br/dbt_project/logs', 'debug': 'False', 'profiles_dir': '/home/codespace/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt docs serve', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:40:29.602866 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m14:40:29.603526 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m14:40:29.604107 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m14:40:30.349439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ff36a084-0764-4204-99ab-f2ccb9522185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5179601dc0>]}
+[0m14:40:30.436395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ff36a084-0764-4204-99ab-f2ccb9522185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d518ddf7c20>]}

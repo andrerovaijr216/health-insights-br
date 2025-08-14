@@ -1,0 +1,15 @@
+name: 'health_insights_br'
+version: '1.0.0'
+profile: 'health_insights_br'
+
+model-paths: ["models"]
+test-paths: ["tests"] # <-- AQUI ESTÁ A CORREÇÃO
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+models:
+  health_insights_br:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_paciente
+    description: "Dimensão que contém informações demográficas de cada paciente, com base na sua internação."
+    columns:
+      - name: sk_paciente
+        description: "Chave substituta (surrogate key) para o paciente."
+        tests:
+          - unique
+          - not_null
+
+  - name: fato_internacoes
+    description: "Tabela de fatos com os principais eventos e métricas de internações hospitalares."
+    columns:
+      - name: sk_paciente
+        description: "Chave estrangeira que referencia a dimensão de paciente."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_paciente')
+              field: sk_paciente
